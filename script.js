@@ -44,7 +44,8 @@ module.exports = new Script({
                 }
 
                 if (!_.has(scriptRules, upperText)) {
-                    return bot.say(`I didn't <br /> understand <br/> that.`).then(() => 'speak');
+                    var teungarti = new String("teu ngarti ah");
+                    return bot.say(teungarti.bold()).then(() => 'speak');
                 }
 
                 var response = scriptRules[upperText];
