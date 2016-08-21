@@ -44,7 +44,7 @@ module.exports = new Script({
                 }
 
                 if (!_.has(scriptRules, upperText)) {
-                    var teungarti = String.fromCharCode(937);
+                    var teungarti = String.fromCharCode(0x1F601);
                     return bot.say(teungarti).then(() => 'speak');
                 }
 
