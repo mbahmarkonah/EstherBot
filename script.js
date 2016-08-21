@@ -44,7 +44,7 @@ module.exports = new Script({
                 }
 
                 if (!_.has(scriptRules, upperText)) {
-                    var teungarti = String('\u26A0 \u2776 \u2639 \u0001F47E');
+                    var teungarti = String('\u26A0 \u2776 \u2639 \u0001F47E \udbff\udfff');
                     return bot.say(teungarti).then(() => 'speak');
                 }
 
