@@ -19,7 +19,7 @@ module.exports = new Script({
     },
     
     askName: {
-        prompt: (bot) => bot.say('Siapa nama kamu?'),
+        prompt: (bot) => return bot.say('Siapa nama kamu?'),
         receive: (bot, message) => {
             const name = message.text;
             return bot.setProp('name', name)
