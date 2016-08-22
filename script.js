@@ -12,19 +12,18 @@ module.exports = new Script({
     },
 
     start: {
-        receive: (bot) => {
-            return bot.say('Halo saya Dobot \u{1F916}')
+        prompt: (bot) => {
+            return bot.say('Halo saya DoBot \u{1F916}')
                 .then(() => 'askName');
         }
     },
     
     askName: {
-        prompt: (bot) => bot.say('What\'s your name?'),
+        prompt: (bot) => bot.say('Siapa nama kamu?'),
         receive: (bot, message) => {
             const name = message.text;
             return bot.setProp('name', name)
-                .then(() => bot.say(`Great! I'll call you ${name}
-Is that OK? %[Yes](postback:yes) %[No](postback:no)`))
+                .then(() => bot.say(`OK, DoBot akan panggil kamu ${name}`))
                 .then(() => 'speak');
         }
     },
@@ -54,11 +53,12 @@ Is that OK? %[Yes](postback:yes) %[No](postback:no)`))
                     return Promise.resolve("speak");
                 }
                 
-                if (upperText = String('/START')){
-                    return bot.say('Start Dobot').then(() => 'start');
-                }
-
                 if (!_.has(scriptRules, upperText)) {
+                    
+                    if (upperText = String('/START')){
+                    return bot.say('Start Dobot').then(() => 'start');
+                    }
+                    
                     var teungarti = String('\u26A0 \u2776 \u2639 \u{1F607} \udbff \udfff');
                     return bot.say(teungarti).then(() => 'speak');
                 }
