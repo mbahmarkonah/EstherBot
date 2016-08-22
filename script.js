@@ -52,8 +52,10 @@ module.exports = new Script({
                     return bot.say('Start Dobot \u{1F916}').then(() => 'start');
                     }
                     
-                    var teungarti = String('\u26A0 \u2776 \u2639 \u{1F607} \udbff \udfff');
-                    return bot.say(teungarti).then(() => 'speak');
+                    return bot.getProp('name')
+                        .then((name) => bot.say('\u{1F62D}Maaf ${name}, DoBot tidak tahu itu'+
+                                                '\nKasih tahu majikan DoBot di \u{1F4F2} agar DoBot mengerti'))
+                        .then(() => 'speak');
                 }
                 
 
