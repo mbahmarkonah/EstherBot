@@ -14,7 +14,6 @@ module.exports = new Script({
     start: {
         prompt: (bot) => bot.say('Halo saya DoBot \u{1F916}')
         receive: () => 'speak');
-        }
     },
     
     speak: {
