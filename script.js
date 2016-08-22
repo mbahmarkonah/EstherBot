@@ -53,12 +53,11 @@ module.exports = new Script({
                     }
                     
                     return bot.getProp('name')
-                        .then((name) => bot.say('\u{1F62D}Maaf ${name}, DoBot tidak tahu itu'+
-                                                '\nKasih tahu majikan DoBot di \u{1F4F2} agar DoBot mengerti'))
+                        .then((name) => bot.say(`Sorry ${name}, my creator didn't ` +
+                                'teach me how to do anything else!'))
                         .then(() => 'speak');
                 }
                 
-
                 var response = scriptRules[upperText];
                 var lines = response.split('\n');
 
