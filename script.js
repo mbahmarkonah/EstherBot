@@ -53,14 +53,16 @@ Is that OK? %[Yes](postback:yes) %[No](postback:no)`))
                 if (isSilent) {
                     return Promise.resolve("speak");
                 }
+                
+                if (upperText = String('/START')){
+                    return bot.say('Start Dobot').then(() => 'start');
+                }
 
                 if (!_.has(scriptRules, upperText)) {
                     var teungarti = String('\u26A0 \u2776 \u2639 \u{1F607} \udbff \udfff');
                     return bot.say(teungarti).then(() => 'speak');
                 }
-                if (upperText = String('/START')){
-                    return bot.say('Start Dobot').then(() => 'start');
-                }
+                
 
                 var response = scriptRules[upperText];
                 var lines = response.split('\n');
