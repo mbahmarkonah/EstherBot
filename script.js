@@ -14,20 +14,10 @@ module.exports = new Script({
     start: {
         prompt: (bot) => {
             return bot.say('Halo saya DoBot \u{1F916}')
-                .then(() => 'askName');
-        }
-    },
-    
-    askName: {
-        prompt: (bot) => return bot.say('Siapa nama kamu?'),
-        receive: (bot, message) => {
-            const name = message.text;
-            return bot.setProp('name', name)
-                .then(() => bot.say(`OK, DoBot akan panggil kamu ${name}`))
                 .then(() => 'speak');
         }
     },
-
+    
     speak: {
         receive: (bot, message) => {
 
