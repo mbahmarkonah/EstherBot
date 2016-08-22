@@ -53,8 +53,8 @@ module.exports = new Script({
                     }
                     
                     return bot.getProp('name')
-                        .then((name) => bot.say(`Sorry ${name}, my creator didn't ` +
-                                'teach me how to do anything else!'))
+                        .then((name) => bot.say(`\u{1F916}Maaf ${name}, majikanku tidak mengajari itu` +
+                                '\n Hubungi dia agar DoBot pintar\u{1F63A}'))
                         .then(() => 'speak');
                 }
                 
