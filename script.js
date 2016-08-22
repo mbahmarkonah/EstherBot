@@ -13,7 +13,18 @@ module.exports = new Script({
 
     start: {
         receive: (bot) => {
-            return bot.say('testtest')
+            return bot.say('Halo saya Dobot \u{1F916}')
+                .then(() => 'askName');
+        }
+    },
+    
+    askName: {
+        prompt: (bot) => bot.say('What\'s your name?'),
+        receive: (bot, message) => {
+            const name = message.text;
+            return bot.setProp('name', name)
+                .then(() => bot.say(`Great! I'll call you ${name}
+Is that OK? %[Yes](postback:yes) %[No](postback:no)`))
                 .then(() => 'speak');
         }
     },
@@ -46,6 +57,9 @@ module.exports = new Script({
                 if (!_.has(scriptRules, upperText)) {
                     var teungarti = String('\u26A0 \u2776 \u2639 \u{1F607} \udbff \udfff');
                     return bot.say(teungarti).then(() => 'speak');
+                }
+                if (upperText = String('/START')){
+                    return bot.say('Start Dobot').then(() => 'start');
                 }
 
                 var response = scriptRules[upperText];
