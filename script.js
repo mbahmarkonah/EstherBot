@@ -12,7 +12,7 @@ module.exports = new Script({
     },
 
     start: {
-        prompt: (bot) => {
+        receive: (bot) => {
              return bot.say('Halo saya DoBot \u{1F916}')
             .then(() => 'speak');
         }
