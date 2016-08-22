@@ -12,11 +12,11 @@ module.exports = new Script({
     },
 
     start: {
-        prompt: (bot) => bot.say('Halo saya DoBot \u{1F916}'),
+        prompt: (bot) => bot.say('Halo saya DoBot \u{1F916}\n Siapakah nama kamu?'),
         receive: (bot, message) => {
             const name = message.text;
             return bot.setProp('name', name)
-                .then(() => bot.say(`Great! I'll call you ${name}))
+                .then(() => bot.say(`OK, DoBot akan panggil kamu ${name}`))
                 .then(() => 'speak');
         }
     },
