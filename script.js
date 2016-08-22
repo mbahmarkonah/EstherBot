@@ -45,7 +45,7 @@ module.exports = new Script({
                 
                 if (!_.has(scriptRules, upperText)) {
                     
-                    if (upperText = String('/START')){
+                    if (upperText == String('/START')){
                     return bot.say('Start Dobot').then(() => 'start');
                     }
                     
