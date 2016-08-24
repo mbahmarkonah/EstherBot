@@ -56,7 +56,7 @@ module.exports = new Script({
                     return bot.say('Pusing Dobot \u{1F916}').then(() => 'speak');
                 }
                 
-                var response = scriptRules[0];
+                var response = scriptRules['BOT'];
                 var lines = response.split('\n');
 
                 var p = Promise.resolve();
