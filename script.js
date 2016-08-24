@@ -53,7 +53,7 @@ module.exports = new Script({
                     return bot.say('Start Dobot \u{1F916}').then(() => 'start');
                     }
                     
-                    return bot.say(unknownSpeak['1']).then(() => 'speak');
+                    return bot.say('Pusing Dobot \u{1F916}').then(() => 'speak');
                 }
                 
                 var response = scriptRules[upperText];
