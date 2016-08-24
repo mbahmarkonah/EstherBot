@@ -54,10 +54,8 @@ module.exports = new Script({
                     }
                     
                     var unknown = Math.floor((Math.random() * 6) + 1);
-                    var unknwonSpeak = unknownRules[unknown];
-                    return bot.getProp('name')
-                        .then((name) => bot.say(unknownSpeak)
-                        .then(() => 'speak');
+                    var unknwonSpeak = unknownRules[1];
+                    return bot.say(unknownSpeak).then(() => 'speak');
                 }
                 
                 var response = scriptRules[upperText];
