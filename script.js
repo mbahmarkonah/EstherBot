@@ -53,9 +53,7 @@ module.exports = new Script({
                     return bot.say('Start Dobot \u{1F916}').then(() => 'start');
                     }
                     
-                    var unknown = Math.floor((Math.random() * 6) + 1);
-                    var unknwonSpeak = unknownRules[1];
-                    return bot.say(unknownSpeak).then(() => 'speak');
+                    return bot.say(unknownSpeak['1']).then(() => 'speak');
                 }
                 
                 var response = scriptRules[upperText];
