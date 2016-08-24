@@ -53,10 +53,12 @@ module.exports = new Script({
                     return bot.say('Start Dobot \u{1F916}').then(() => 'start');
                     }
                     
-                    return bot.say('Pusing Dobot \u{1F916}').then(() => 'speak');
+                    var unknown = new String(Math.floor((Math.random() * 6) +1));
+                    var unknownx = unknownRules[unknown]; 
+                    return bot.say(unknownx).then(() => 'speak');
                 }
                 
-                var response = scriptRules['BOT'];
+                var response = scriptRules[upperText];
                 var lines = response.split('\n');
 
                 var p = Promise.resolve();
