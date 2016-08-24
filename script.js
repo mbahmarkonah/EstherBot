@@ -4,6 +4,7 @@ const _ = require('lodash');
 const Script = require('smooch-bot').Script;
 
 const scriptRules = require('./script.json');
+const unknownRules = require('./unknown.json')
 
 module.exports = new Script({
     processing: {
@@ -52,9 +53,10 @@ module.exports = new Script({
                     return bot.say('Start Dobot \u{1F916}').then(() => 'start');
                     }
                     
+                    var unknown = Math.floor((Math.random() * 6) + 1);
+                    var unknwonSpeak = unknownRules[unknown];
                     return bot.getProp('name')
-                        .then((name) => bot.say(`\u{1F916}Maaf ${name}, majikanku tidak mengajari itu` +
-                                '\n Hubungi dia agar DoBot pintar\u{1F63A}'))
+                        .then((name) => bot.say(unknownSpeak)
                         .then(() => 'speak');
                 }
                 
