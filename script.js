@@ -53,8 +53,12 @@ module.exports = new Script({
                     return bot.say('Start Dobot \u{1F916}').then(() => 'start');
                     }
                     
+                    var asal = unknownRules.[Math.floor(Math.random() * unknownRules.length)];
+                    return bot.say('\u{1F635} '+ unknownx).then(() => 'speak');
+                    
                     var unknown = Math.floor((Math.random() * 9) +1);
-                    var unknownx = unknownRules.unknown; 
+                    var unknownString = String(unknown);
+                    var unknownx = unknownRules(unknownString); 
                     return bot.say('\u{1F635} '+ unknownx).then(() => 'speak');
                 }
                 
