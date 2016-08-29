@@ -1,11 +1,9 @@
 {
-    "1": "Maaf DoBot tidak tahu.",
-    "2": "Haaaa, DoBot lelah dikasih pertanyaan aneh.",
-    "3": "DoBot tidak paham dengan itu.",
-    "4": "Hmmmmm apa yaa?",
-    "5": "DoBot memilih diam dan tidak membocorkannya kepada kamu.",
-    "6": "Beep Beep DoBot pusinggg.",
-    "7": "Majikan DoBot tidak mengajari itu.",
-    "8": "DoBot bukan mbah Google yang serba tahu.",
-    "9": "DoBot hanya Robot bukan buku ensiklopedia."
+	"featured": [{
+		"apa": "Maaf DoBot tidak tahu."
+	}, {
+		"ada": "Haaaa, DoBot lelah dikasih pertanyaan aneh."
+	}, {
+		"aja": "DoBot tidak paham dengan itu."
+	}]
 }
