@@ -55,7 +55,7 @@ module.exports = new Script({
                     
                     var unknown = new String(Math.floor((Math.random() * 9) +1));
                     var unknownx = unknownRules[unknown]; 
-                    var asal = unknownRules.featured[Math.floor(Math.random() * unknownRules.featured.length)]
+                    var asal = unknownRules.featured[Math.floor(Math.random() * unknownRules.featured.length)];
                     return bot.say('\u{1F635} '+ asal).then(() => 'speak');
                 }
                 
