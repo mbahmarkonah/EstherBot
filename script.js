@@ -85,7 +85,7 @@ module.exports = new Script({
     konversi: {
         receive: (bot, message) => {
             var konversi = message.text;
-            konversi = konversi * 0,0393701;
+            konversi = konversi * 0.0393701;
             return bot.say('DP adalah' + konversi + ' inch')
             .then(() => 'speak');
         }
