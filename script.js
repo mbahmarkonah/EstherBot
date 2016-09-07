@@ -51,12 +51,12 @@ module.exports = new Script({
                     
                     if (upperText == String('KONVERSI')){
                         return bot.say('Silahkan masukkan data DP dalam mm');
-                        receive: (bot, message) => {
+                        
                             var konversi = message.text;
                             konversi = konversi * 0,0393701;
                             return bot.say('DP adalah' + konversi + ' inch')
                             .then(() => 'speak');
-                        }
+                        
                     }
                     
                     if (upperText == String('/START')){
