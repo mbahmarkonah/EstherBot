@@ -81,7 +81,7 @@ module.exports = new Script({
                 .then(getSilent)
                 .then(processMessage);
         }
-    }
+    },
     konversi: {
         receive: (bot, message) => {
             var konversi = message.text;
