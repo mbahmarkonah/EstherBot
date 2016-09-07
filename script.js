@@ -50,13 +50,7 @@ module.exports = new Script({
                 if (!_.has(scriptRules, upperText)) {
                     
                     if (upperText == String('KONVERSI')){
-                        return bot.say('Silahkan masukkan data DP dalam mm');
-                        
-                            var konversi = message.text;
-                            konversi = konversi * 0,0393701;
-                            return bot.say('DP adalah' + konversi + ' inch')
-                            .then(() => 'speak');
-                        
+                        return bot.say('Silahkan masukkan data DP dalam mm').then(() => 'konversi');
                     }
                     
                     if (upperText == String('/START')){
@@ -88,4 +82,13 @@ module.exports = new Script({
                 .then(processMessage);
         }
     }
+    konversi: {
+        receive: (bot, message) => {
+            var konversi = message.text;
+            konversi = konversi * 0,0393701;
+            return bot.say('DP adalah' + konversi + ' inch')
+            .then(() => 'speak');
+        }
+    }
+
 });
