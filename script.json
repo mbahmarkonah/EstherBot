@@ -6,7 +6,7 @@
     "LEARN ABOUT ESTHER": "<b>WATTTTTTTT WATTTTT</b>",
     "CONNECT ME": "",
     "DISCONNECT": "Roger that, EstherBot is back.",
-    "BAT01CE601":"#BAT01CE601#_#BUCHOLZ MAIN TRANSF#_#ALARM#\n#Main transformer Bucholz Relay activated#",
+    "BAT01CE601":"\u{1F984}KKS: BAT01CE601\n\u{1F4CB}TEXT: BUCHOLZ MAIN TRANSF\n\u{26A0}STATUS: ALARM\n\u{1F4DA}REASON: Main transformer Bucholz Relay activated\n\u{1F4A1}ACTION: Contact the protection department and/or ABB",
     "BAT01CT001":"#BAT01CT001#_#WINDING TEMPERATURE#_#> HIGH#\n#Main transformer winding temperature supervision, stage1, has activated#",
     "BAT01CT003":"#BAT01CT003#_#OIL TEMPERATURE#_#> HIGH#\n#Main transformer oil temperature oil temperature supervision, stage 1, has activated.#",
     "BAT01EG801":"#BAT01EG801#_#AUX VOLT TRANSFORMER#_#FAULT#\n#Common alarm.#",
