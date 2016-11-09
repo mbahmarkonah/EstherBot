@@ -14,7 +14,7 @@ module.exports = new Script({
 
     start: {
         receive: (bot) => {
-            return bot.say('Halo saya DoBot \u{1F916} \n--------------------- \nDobot adalah personal assistant yang siap sedia membantu mengenai informasi GT Troubleshooting Blok 1&2 serta membantu konversi air intake filter. \n \n\u{26A0}Ketik HELP atau TOLONG untuk informasi lebih lanjut %[INDONESIA POWER](http://www.indonesiapower.co.id)')
+            return bot.say('Halo saya DoBot \u{1F916} \n--------------------- \nDobot adalah personal assistant yang siap sedia membantu mengenai informasi GT Troubleshooting Blok 1&2 serta membantu konversi air intake filter. \n \nKetik HELP atau TOLONG untuk informasi lebih lanjut')
             .then(() => 'speak');
            }
         
