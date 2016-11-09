@@ -51,6 +51,10 @@ module.exports = new Script({
                         return bot.say('Silahkan masukkan data DP dalam mm').then(() => 'konversi');
                     }
                     
+                    if (upperText == (String('HELP') || String('TOLONG'))){
+                        return bot.say('Silahkan masukkan data DP dalam mm').then(() => 'konversi');
+                    }
+                    
                     if (upperText == (String('START') || String('/START'))){
                         return bot.say('Start ulang DoBot').then(() => 'start');
                     }
