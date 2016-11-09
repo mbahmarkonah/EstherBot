@@ -65,7 +65,7 @@ module.exports = new Script({
                 }
                 
                 var response = scriptRules[upperText];
-                var lines = response.split('\n');
+                var lines = response.split('\nl');
 
                 var p = Promise.resolve();
                 _.each(lines, function(line) {
