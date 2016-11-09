@@ -52,7 +52,7 @@ module.exports = new Script({
                     }
                     
                     if (upperText == (String('START') || String('/START'))){
-                        return bot.then(() => 'start');
+                        return bot.say('Start ulang DoBot').then(() => 'start');
                     }
                     
                     var unknown = new String(Math.floor((Math.random() * 9) +1));
