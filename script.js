@@ -15,7 +15,7 @@ module.exports = new Script({
     start: {
        // receive: (bot) => {
          //   return bot.say('Halo saya DoBot \u{1F916}\n Dobot adalah personal assistant yang siap sedia membantu mengenai informasi GT Troubleshooting Blok 1&2 serta membantu konversi air intake filter. \n \n Ketik help atau tolong untuk informasi lebih lanjut')
-         prompt: (bot) => bot.say('Halo saya DoBot \u{1F916} \n--------------------- \nDobot adalah personal assistant yang siap sedia membantu mengenai informasi GT Troubleshooting Blok 1&2 serta membantu konversi air intake filter. \n \nKetik HELP atau TOLONG untuk informasi lebih lanjut''),   
+         prompt: (bot) => bot.say('Halo saya DoBot \u{1F916} \n--------------------- \nDobot adalah personal assistant yang siap sedia membantu mengenai informasi GT Troubleshooting Blok 1&2 serta membantu konversi air intake filter. \n \nKetik HELP atau TOLONG untuk informasi lebih lanjut'),   
         .then(() => 'speak');
            }
         
