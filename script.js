@@ -13,13 +13,11 @@ module.exports = new Script({
     },
 
     start: {
-        prompt: (bot) => bot.say('Halo saya DoBot \u{1F916}\n Siapakah nama kamu?'),
-        receive: (bot, message) => {
-            const name = message.text;
-            return bot.setProp('name', name)
-                .then(() => bot.say(`OK, DoBot akan panggil kamu ${name}`))
+        receive: (bot) => {
+            return bot.say('Halo saya DoBot \u{1F916}\n Dobot adalah personal assistant yang siap sedia membantu mengenai informasi GT Troubleshooting Blok 1&2 serta membantu konversi air intake filter. \n \n Ketik help atau tolong untuk informasi lebih lanjut')
                 .then(() => 'speak');
-        }
+           }
+        
     },
     
     speak: {
@@ -53,8 +51,8 @@ module.exports = new Script({
                         return bot.say('Silahkan masukkan data DP dalam mm').then(() => 'konversi');
                     }
                     
-                    if (upperText == String('/START')){
-                    return bot.say('Start Dobot \u{1F916}').then(() => 'start');
+                    if (upperText == (String('START') || String('/START'))){
+                        return bot.then(() => 'start');
                     }
                     
                     var unknown = new String(Math.floor((Math.random() * 9) +1));
